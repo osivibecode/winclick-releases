@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - WinClick</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1a365d;
+            border-bottom: 2px solid #805ad5;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #2c5282;
+            margin-top: 30px;
+        }
+        .update-date {
+            text-align: center;
+            font-size: 0.9em;
+            color: #718096;
+            margin-bottom: 40px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #c53030;
+            font-weight: bold;
+        }
+        .callout {
+            background: #faf5ff;
+            border-left: 4px solid #805ad5;
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 24px 0;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #a0aec0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🖱️ WinClick Privacy Policy</h1>
+    <p class="update-date">Effective Date: September 16, 2026</p>
+
+    <div class="callout">
+        <strong>In short:</strong> WinClick collects nothing, sends nothing, and has no
+        servers. It makes no network connections of any kind. Everything it stores is a
+        handful of your own settings, in a file on your Mac.
+    </div>
+
+    <h2>1. Overview</h2>
+    <p>osivibecode publishes WinClick, a macOS utility that adds Windows-style file
+       shortcuts and right-click menu items to Finder. This policy explains what the app
+       stores and what it does not. There is no account, no sign-in, no analytics, no
+       advertising and no crash reporting.</p>
+
+    <h2>2. Data Stored Locally</h2>
+    <p>WinClick keeps its settings in a plain file on your Mac, at
+       <code>~/Library/Application Support/WinClick/Settings.plist</code>. It is never
+       transmitted anywhere:</p>
+    <ul>
+        <li><strong>Feature switches:</strong> which shortcuts and menu items you have
+            turned on.</li>
+        <li><strong>New file templates:</strong> the names and extensions you configured
+            for the "New ▸" submenu.</li>
+        <li><strong>Menu icon colour:</strong> your chosen tint.</li>
+        <li><strong>Cut clipboard:</strong> while a Cut is pending, the paths of the files
+            you cut, so Paste knows what to move. Cleared as soon as you paste.</li>
+        <li><strong>Last folder shown by Finder:</strong> so "Open Terminal Here" knows
+            where to open. Overwritten as you browse.</li>
+    </ul>
+
+    <h2>3. Third-Party Services</h2>
+    <p><span class="highlight">None.</span> WinClick contains no advertising SDK, no
+       analytics library and no cloud service. It opens no network sockets. Nothing about
+       you or your files leaves your Mac.</p>
+
+    <h2>4. Required Permissions</h2>
+    <ul>
+        <li><strong>Accessibility</strong> — granted to the background helper,
+            WinClickHelper. macOS requires this to observe keystrokes so the app can
+            recognise shortcuts such as ⌘X, Delete and F2 while Finder is frontmost. Keys
+            are matched against the shortcut list and then discarded. They are never
+            recorded, stored or transmitted, and no logging of key codes remains in the
+            shipping app.</li>
+        <li><strong>Finder extension</strong> — enabled in System Settings, so the app can
+            add its items to Finder's right-click menu.</li>
+        <li><strong>Background helper</strong> — a login item that runs the shortcuts and
+            the menu bar item.</li>
+        <li><strong>File access</strong> — the app moves, copies, creates and trashes the
+            files you act on, in the folders you act on them in. It reads nothing else.</li>
+    </ul>
+
+    <h2>5. Your Files</h2>
+    <p>WinClick operates on files only in response to something you do — a menu click or a
+       shortcut. It never scans your disk, never indexes your files, never reads their
+       contents, and never copies them anywhere but the destination you chose.</p>
+
+    <h2>6. Data Retention &amp; Deletion</h2>
+    <p>Because everything is stored locally, we have no access to it and nothing to
+       delete on our side. To remove it all:</p>
+    <ul>
+        <li>Delete <code>~/Library/Application Support/WinClick/</code>.</li>
+        <li>Move WinClick to the Trash, then revoke Accessibility in System Settings ▸
+            Privacy &amp; Security ▸ Accessibility.</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>WinClick is a general-purpose desktop utility and collects no data from anyone,
+       including children under 13.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>If a future version of WinClick ever collects anything, this page will be updated
+       before that version ships, and the change will be described in the app's release
+       notes.</p>
+
+    <h2>9. Contact Information</h2>
+    <p>Questions about privacy in WinClick:<br>
+       Email: <a href="mailto:osi.vibe.code@gmail.com">osi.vibe.code@gmail.com</a></p>
+
+    <div class="footer">
+        &copy; 2026 osivibecode. All rights reserved.
+    </div>
+</div>
+</body>
+</html>
