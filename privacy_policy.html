@@ -68,12 +68,12 @@
 <body>
 <div class="container">
     <h1>🖱️ WinClick Privacy Policy</h1>
-    <p class="update-date">Effective Date: September 16, 2026</p>
+    <p class="update-date">Effective Date: September 18, 2026</p>
 
     <div class="callout">
-        <strong>In short:</strong> WinClick collects nothing, sends nothing, and has no
-        servers. It makes no network connections of any kind. Everything it stores is a
-        handful of your own settings, in a file on your Mac.
+        <strong>In short:</strong> WinClick collects nothing and has no servers. Its only
+        network connection is a once-a-day check for a newer version, which you can switch
+        off. Everything it stores is a handful of your own settings, in a file on your Mac.
     </div>
 
     <h2>1. Overview</h2>
@@ -98,12 +98,29 @@
             where to open. Overwritten as you browse.</li>
     </ul>
 
-    <h2>3. Third-Party Services</h2>
-    <p><span class="highlight">None.</span> WinClick contains no advertising SDK, no
-       analytics library and no cloud service. It opens no network sockets. Nothing about
-       you or your files leaves your Mac.</p>
+    <h2>3. Update Checks</h2>
+    <p>Starting with version 1.0.3, WinClick checks for updates using the open-source
+       <a href="https://sparkle-project.org">Sparkle</a> framework. About once a day it
+       downloads a small list of available versions from
+       <code>osivibecode.github.io</code>, and, if you choose to install an update, the new
+       version from <code>github.com</code>.</p>
+    <ul>
+        <li><strong>What is sent:</strong> an ordinary web request, which names the app
+            and its version. No identifier, no system profile and nothing about your files
+            is included.</li>
+        <li><strong>Who sees it:</strong> GitHub, which hosts the files, receives your IP
+            address as it would for any download. We do not receive or keep these logs.</li>
+        <li><strong>Turning it off:</strong> WinClick ▸ About ▸ Updates ▸ "Check for
+            updates automatically". With it off, WinClick connects only when you choose
+            Check for Updates….</li>
+    </ul>
 
-    <h2>4. Required Permissions</h2>
+    <h2>4. Third-Party Services</h2>
+    <p><span class="highlight">None</span> beyond the update check above. WinClick contains
+       no advertising SDK, no analytics library and no cloud service. Nothing about you or
+       your files leaves your Mac.</p>
+
+    <h2>5. Required Permissions</h2>
     <ul>
         <li><strong>Accessibility</strong> — granted to the background helper,
             WinClickHelper. macOS requires this to observe keystrokes so the app can
@@ -119,12 +136,12 @@
             files you act on, in the folders you act on them in. It reads nothing else.</li>
     </ul>
 
-    <h2>5. Your Files</h2>
+    <h2>6. Your Files</h2>
     <p>WinClick operates on files only in response to something you do — a menu click or a
        shortcut. It never scans your disk, never indexes your files, never reads their
        contents, and never copies them anywhere but the destination you chose.</p>
 
-    <h2>6. Data Retention &amp; Deletion</h2>
+    <h2>7. Data Retention &amp; Deletion</h2>
     <p>Because everything is stored locally, we have no access to it and nothing to
        delete on our side. To remove it all:</p>
     <ul>
@@ -133,16 +150,16 @@
             Privacy &amp; Security ▸ Accessibility.</li>
     </ul>
 
-    <h2>7. Children's Privacy</h2>
+    <h2>8. Children's Privacy</h2>
     <p>WinClick is a general-purpose desktop utility and collects no data from anyone,
        including children under 13.</p>
 
-    <h2>8. Changes to This Policy</h2>
+    <h2>9. Changes to This Policy</h2>
     <p>If a future version of WinClick ever collects anything, this page will be updated
        before that version ships, and the change will be described in the app's release
        notes.</p>
 
-    <h2>9. Contact Information</h2>
+    <h2>10. Contact Information</h2>
     <p>Questions about privacy in WinClick:<br>
        Email: <a href="mailto:osi.vibe.code@gmail.com">osi.vibe.code@gmail.com</a></p>
 
