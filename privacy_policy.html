@@ -68,19 +68,21 @@
 <body>
 <div class="container">
     <h1>🖱️ WinClick Privacy Policy</h1>
-    <p class="update-date">Effective Date: September 18, 2026</p>
+    <p class="update-date">Effective Date: September 19, 2026</p>
 
     <div class="callout">
-        <strong>In short:</strong> WinClick collects nothing and has no servers. Its only
-        network connection is a once-a-day check for a newer version, which you can switch
-        off. Everything it stores is a handful of your own settings, in a file on your Mac.
+        <strong>In short:</strong> WinClick collects no personal data and shows no ads. It
+        goes online for two things: a once-a-day check for a newer version, which you can
+        switch off, and a licence check, which sends your licence key and an anonymous
+        identifier for your Mac. Your settings stay in a file on your Mac.
     </div>
 
     <h2>1. Overview</h2>
-    <p>osivibecode publishes WinClick, a macOS utility that adds Windows-style file
+    <p>OsiVibeCode LLC, an Arizona limited liability company, publishes WinClick, a macOS utility that adds Windows-style file
        shortcuts and right-click menu items to Finder. This policy explains what the app
        stores and what it does not. There is no account, no sign-in, no analytics, no
-       advertising and no crash reporting.</p>
+       advertising and no crash reporting. Paid features are unlocked by a licence key,
+       described in section 4.</p>
 
     <h2>2. Data Stored Locally</h2>
     <p>WinClick keeps its settings in a plain file on your Mac, at
@@ -97,6 +99,10 @@
         <li><strong>Last folder shown by Finder:</strong> so "Open Terminal Here" knows
             where to open. Overwritten as you browse.</li>
     </ul>
+    <p>Two more files in the same folder hold your licence:
+       <code>License.key</code>, the key you entered, and <code>License.token</code>, the
+       signed confirmation that this Mac may use the paid features. Both are readable only
+       by your user account.</p>
 
     <h2>3. Update Checks</h2>
     <p>Starting with version 1.0.3, WinClick checks for updates using the open-source
@@ -115,12 +121,46 @@
             Check for Updates….</li>
     </ul>
 
-    <h2>4. Third-Party Services</h2>
-    <p><span class="highlight">None</span> beyond the update check above. WinClick contains
-       no advertising SDK, no analytics library and no cloud service. Nothing about you or
-       your files leaves your Mac.</p>
 
-    <h2>5. Required Permissions</h2>
+    <h2>4. Licence Checks</h2>
+    <p>The paid keyboard shortcuts need a free trial or a licence. WinClick asks our
+       licence server, at <code>license.osivibecode.xyz</code>, to start the trial, to
+       activate a key and then about once a day to confirm the licence is still valid.</p>
+    <ul>
+        <li><strong>What is sent:</strong> your licence key; an anonymous identifier for
+            your Mac (a one-way hash of its hardware identifier, which cannot be turned
+            back into it); and, when you activate, the name of your Mac as macOS reports
+            it, so you can tell your Macs apart. Nothing about your files is sent.</li>
+        <li><strong>What the server stores:</strong> your licence key and plan, its status,
+            the Macs it is active on with their names and dates, the date your trial
+            started for each Mac, and the email address you used at checkout.</li>
+        <li><strong>Who runs it:</strong> we do, on Google Firebase (Cloud Functions and
+            Firestore) in the United States. Google processes the data on our behalf.</li>
+        <li><strong>Offline:</strong> WinClick keeps working for several days without
+            reaching the server, and the Finder menu works offline indefinitely.</li>
+        <li><strong>Deactivating:</strong> WinClick ▸ About ▸ "Deactivate This Mac" removes
+            that Mac from your licence.</li>
+    </ul>
+
+    <h2>5. Payments</h2>
+    <p>Purchases are handled by <strong>Stripe</strong>, which is the merchant of record
+       and the seller for your purchase. You enter your payment details on Stripe's
+       checkout page; we never see or store your card number. Stripe's use of your data is
+       covered by the <a href="https://stripe.com/privacy">Stripe Privacy Policy</a>.</p>
+    <p>From your purchase we receive and keep your email address, your plan, and Stripe's
+       identifiers for your customer record and subscription, so that we can issue your
+       licence key, check whether the subscription is active and answer support requests.
+       We use your email address for your licence and support only — never for marketing.
+       Managing or cancelling a subscription happens in Stripe's customer portal, reachable
+       from WinClick ▸ About ▸ Manage Subscription or
+       <a href="https://license.osivibecode.xyz/manage">license.osivibecode.xyz/manage</a>.</p>
+    <h2>6. Third-Party Services</h2>
+    <p>WinClick contains no advertising SDK and no analytics library. Beyond the update
+       check (section 3) and the licence check (section 4), nothing about you or your files
+       leaves your Mac. The services involved are GitHub, which hosts the updates; Google
+       Firebase, which hosts our licence server; and Stripe, which handles payments.</p>
+
+    <h2>7. Required Permissions</h2>
     <ul>
         <li><strong>Accessibility</strong> — granted to the background helper,
             WinClickHelper. macOS requires this to observe keystrokes so the app can
@@ -136,35 +176,56 @@
             files you act on, in the folders you act on them in. It reads nothing else.</li>
     </ul>
 
-    <h2>6. Your Files</h2>
+    <h2>8. Your Files</h2>
     <p>WinClick operates on files only in response to something you do — a menu click or a
        shortcut. It never scans your disk, never indexes your files, never reads their
        contents, and never copies them anywhere but the destination you chose.</p>
 
-    <h2>7. Data Retention &amp; Deletion</h2>
-    <p>Because everything is stored locally, we have no access to it and nothing to
-       delete on our side. To remove it all:</p>
+    <h2>9. Data Retention &amp; Deletion</h2>
+    <p>Settings and licence files live on your Mac. On our side we keep only the licence
+       record described in section 4, for as long as the licence exists and afterwards as
+       long as tax and accounting rules require us to keep the sale. To have your licence
+       record deleted, email us; note that deleting it ends the licence. To remove
+       everything on your Mac:</p>
     <ul>
-        <li>Delete <code>~/Library/Application Support/WinClick/</code>.</li>
+        <li>Delete <code>~/Library/Application Support/WinClick/</code>, which also removes
+            your licence key and token from this Mac.</li>
         <li>Move WinClick to the Trash, then revoke Accessibility in System Settings ▸
             Privacy &amp; Security ▸ Accessibility.</li>
     </ul>
 
-    <h2>8. Children's Privacy</h2>
-    <p>WinClick is a general-purpose desktop utility and collects no data from anyone,
-       including children under 13.</p>
 
-    <h2>9. Changes to This Policy</h2>
+    <h2>10. Your Rights</h2>
+    <p>OsiVibeCode LLC is the controller of the licence and purchase data described in
+       sections 4 and 5. We process it to perform the contract with you (issuing and
+       checking your licence) and to meet our legal obligations (tax and accounting
+       records). We do not sell personal data, share it for advertising, or use it for
+       automated decisions or profiling.</p>
+    <p>Wherever you live, you may ask us to give you a copy of the data we hold about you,
+       correct it, or delete it; deleting your licence record ends the licence. Depending
+       on where you live you may also object to or restrict our processing, or ask for your
+       data in a portable form. Email
+       <a href="mailto:osi.vibe.code@gmail.com">osi.vibe.code@gmail.com</a> and we will
+       answer within 30 days. If you are in the EU, the UK or Switzerland and are not
+       satisfied, you may complain to your local data protection authority.</p>
+    <p>Our servers are in the United States, so using WinClick's licence features means
+       your licence data is transferred there.</p>
+    <h2>11. Children's Privacy</h2>
+    <p>WinClick is a general-purpose desktop utility, is not directed at children, and
+       collects no personal data beyond what a purchase requires.</p>
+
+    <h2>12. Changes to This Policy</h2>
     <p>If a future version of WinClick ever collects anything, this page will be updated
        before that version ships, and the change will be described in the app's release
        notes.</p>
 
-    <h2>10. Contact Information</h2>
-    <p>Questions about privacy in WinClick:<br>
+    <h2>13. Contact Information</h2>
+    <p>Questions about privacy in WinClick, or a request under section 10:<br>
+       OsiVibeCode LLC, Arizona, United States<br>
        Email: <a href="mailto:osi.vibe.code@gmail.com">osi.vibe.code@gmail.com</a></p>
 
     <div class="footer">
-        &copy; 2026 osivibecode. All rights reserved.
+        &copy; 2026 OsiVibeCode LLC. All rights reserved.
     </div>
 </div>
 </body>
